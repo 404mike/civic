@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cookie</title>
+    <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" type="text/javascript"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        //deny all consent until the user has manually consented
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'functionality_storage': 'denied',
+            'personalization_storage': 'denied',
+            'security_storage': 'denied'
+        });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDTV3CHP8Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-QDTV3CHP8Z');
+    </script>
+</head>
+
+<body>
+    <script>
+        var config = {
+            "apiKey": "ef5bd633b3bf6476b99ec8fd387a8cd2bb9d1f42",
+            "product": "PRO_MULTISITE",
+            "optionalCookies": [{
+                "name": "analytics",
+                "label": "Analytical Cookies",
+                "description": "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
+                "cookies": [],
+                "onAccept": function () {
+                    console.log("Analytics accepted");
+                },
+                "onRevoke": function () {
+                    console.log("Analytics rejected");
+                }
+            }],
+            "position": "left",
+            "theme": "light"
+        };
+
+        CookieControl.load(config);
+    </script>
+
+</body>
+
+</html>
