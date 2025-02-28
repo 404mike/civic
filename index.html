@@ -47,9 +47,21 @@
                 "cookies": [],
                 "onAccept": function () {
                     console.log("Analytics accepted");
+                    if (typeof gtag === 'function') {
+                        console.log("on accept 1");
+                        gtag('consent', 'update', {
+                            'analytics_storage': 'granted'
+                        });
+                    }
                 },
                 "onRevoke": function () {
                     console.log("Analytics rejected");
+                    if (typeof gtag === 'function') {
+                        console.log("on revoke 1");
+                        gtag('consent', 'update', {
+                            'analytics_storage': 'denied'
+                        });
+                    }
                 }
             }],
             "position": "left",
