@@ -8,6 +8,7 @@
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
+            console.log('gtag 1 called');
             dataLayer.push(arguments);
         }
 
@@ -26,6 +27,7 @@
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
+            console.log('gtag 2 called');
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
